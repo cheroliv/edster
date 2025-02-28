@@ -1,0 +1,27 @@
+{
+  "edsterApp": {
+    "presentation": {
+      "home": {
+        "title": "Presentations",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "创建新 Presentation",
+        "createOrEditLabel": "创建或编辑 Presentation",
+        "notFound": "No Presentations found"
+      },
+      "created": "Presentation {{ param }} 创建成功",
+      "updated": "Presentation {{ param }} 更新成功",
+      "deleted": "Presentation {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Presentation {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Presentation"
+      },
+      "id": "ID",
+      "name": "Name",
+      "plan": "Plan",
+      "uri": "Uri",
+      "user": "User"
+    }
+  }
+}

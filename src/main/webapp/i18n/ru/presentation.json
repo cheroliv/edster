@@ -1,0 +1,27 @@
+{
+  "edsterApp": {
+    "presentation": {
+      "home": {
+        "title": "Presentations",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Presentation",
+        "createOrEditLabel": "Создать или отредактировать Presentation",
+        "notFound": "Presentations не найдено"
+      },
+      "created": "Новый Presentation создан с идентификатором {{ param }}",
+      "updated": "Presentation обновлен с идентификатором {{ param }}",
+      "deleted": "Presentation удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Presentation {{ id }}?"
+      },
+      "detail": {
+        "title": "Presentation"
+      },
+      "id": "ID",
+      "name": "Name",
+      "plan": "Plan",
+      "uri": "Uri",
+      "user": "User"
+    }
+  }
+}
