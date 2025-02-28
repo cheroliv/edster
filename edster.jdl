@@ -1,0 +1,71 @@
+application {
+  config {
+    baseName Edster
+    packageName edtech
+    applicationType monolith
+    authenticationType jwt
+    applicationType monolith
+    buildTool gradle
+    cacheProvider ehcache
+    clientFramework react
+    clientPackageManager npm
+    databaseType sql
+    devDatabaseType postgresql
+    prodDatabaseType postgresql
+    testFrameworks [cucumber, cypress]
+    clientTheme darkly
+    clientThemeVariant primary
+    nativeLanguage fr
+    languages [fr, en, ru, es, ar-ly, zh-cn, pt-br, de]
+    reactive true
+  }
+}
+entity Presentation {
+  plan String required
+  uri String required
+}
+entity AsciidocSlide {
+  title String
+  content String
+  notes String
+  page Integer min(1)
+}
+
+enum DocumentResourceType {
+  IMAGE,
+  LINK,
+  PLANTUML,
+  QRCODE,
+}
+entity ImageResource {
+  type DocumentResourceType
+  uri String
+  resolution String
+}
+
+entity LinkResource {
+  type DocumentResourceType
+  uri String
+  target String
+}
+
+entity PlantUMLDiagramResource {
+  type DocumentResourceType
+  uri String
+  umlCode String
+}
+
+
+entity QRCodeResource {
+  type DocumentResourceType
+  uri String
+  data String
+}
+
+service all with serviceImpl
+paginate all with pagination
+//Presentation "0..*" *-- "0" AsciiDoc : "generates"
+//AsciiDoc "1" --* "0..*" ImageResource : "includes"
+//AsciiDoc "1" --* "0..*" LinkResource : "includes"
+//AsciiDoc "1" --* "0..*" PlantUMLDiagramResource : "includes"
+//AsciiDoc "1" --* "0..*" QRCodeResource : "includes"
