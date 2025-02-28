@@ -5,6 +5,8 @@ services:
     image: postgres:17.2
     # volumes:
     #   - ~/volumes/jhipster/edster/postgresql/:/var/lib/postgresql/data/
+    volumes:
+      - /home/cheroliv/workspace/office/data/postgresql/api/:/var/lib/postgresql/data/
     environment:
       - POSTGRES_USER=edster
       - POSTGRES_HOST_AUTH_METHOD=trust
