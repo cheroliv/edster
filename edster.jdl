@@ -19,6 +19,7 @@ application {
     languages [fr, en, ru, es, ar-ly, zh-cn, pt-br, de]
     reactive true
   }
+  entities Presentation, AsciidocSlide, ImageResource, LinkResource, PlantUMLDiagramResource, QRCodeResource
 }
 entity Presentation {
   plan String required
@@ -62,8 +63,19 @@ entity QRCodeResource {
   data String
 }
 
+
+relationship ManyToOne {
+  Presentation to User
+  AsciidocSlide to Presentation
+  ImageResource to AsciidocSlide
+  LinkResource to AsciidocSlide
+  PlantUMLDiagramResource to AsciidocSlide
+  QRCodeResource to AsciidocSlide
+}
+
 service all with serviceImpl
 paginate all with pagination
+
 //Presentation "0..*" *-- "0" AsciiDoc : "generates"
 //AsciiDoc "1" --* "0..*" ImageResource : "includes"
 //AsciiDoc "1" --* "0..*" LinkResource : "includes"
