@@ -1,6 +1,6 @@
 application {
   config {
-    baseName Edster
+    baseName edster
     packageName edtech
     applicationType monolith
     authenticationType jwt
@@ -18,26 +18,34 @@ application {
     nativeLanguage fr
     languages [fr, en, ru, es, ar-ly, zh-cn, pt-br, de]
     reactive true
+    enableSwaggerCodegen true
   }
   entities Presentation, AsciidocSlide, ImageResource, LinkResource, PlantUMLDiagramResource, QRCodeResource
 }
-entity Presentation {
-  plan String required
-  uri String required
-}
-entity AsciidocSlide {
-  title String
-  content String
-  notes String
-  page Integer min(1)
-}
+
+dto * with mapstruct
+service * with serviceImpl
+paginate * with pagination
 
 enum DocumentResourceType {
   IMAGE,
   LINK,
   PLANTUML,
-  QRCODE,
+  QRCODE
 }
+
+entity Presentation {
+  plan String required
+  uri String required
+}
+
+entity AsciidocSlide {
+  title String
+  content String
+  notes String
+  num Integer min(1)
+}
+
 entity ImageResource {
   type DocumentResourceType
   uri String
@@ -56,28 +64,17 @@ entity PlantUMLDiagramResource {
   umlCode String
 }
 
-
 entity QRCodeResource {
   type DocumentResourceType
   uri String
   data String
 }
 
-
-relationship ManyToOne {
-  Presentation to User
-  AsciidocSlide to Presentation
-  ImageResource to AsciidocSlide
-  LinkResource to AsciidocSlide
-  PlantUMLDiagramResource to AsciidocSlide
-  QRCodeResource to AsciidocSlide
-}
-
-service all with serviceImpl
-paginate all with pagination
-
-//Presentation "0..*" *-- "0" AsciiDoc : "generates"
-//AsciiDoc "1" --* "0..*" ImageResource : "includes"
-//AsciiDoc "1" --* "0..*" LinkResource : "includes"
-//AsciiDoc "1" --* "0..*" PlantUMLDiagramResource : "includes"
-//AsciiDoc "1" --* "0..*" QRCodeResource : "includes"
+//relationship ManyToOne {
+//  Presentation to User{required} with builtInEntity
+//  AsciidocSlide to Presentation
+//  ImageResource to AsciidocSlide
+//  LinkResource to AsciidocSlide
+//  PlantUMLDiagramResource to AsciidocSlide
+//  QRCodeResource to AsciidocSlide
+//}
