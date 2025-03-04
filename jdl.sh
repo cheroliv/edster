@@ -39,7 +39,7 @@ rm -R webpack;
 
 rm .editorconfig
 rm .gitattributes
-rm .gitignore
+#rm .gitignore
 rm .lintstagedrc.cjs
 rm .prettierignore
 rm .prettierrc
@@ -63,5 +63,5 @@ rm settings.gradle
 rm sonar-project.properties
 rm tsconfig.json
 rm tsconfig.test.json
-jhipster jdl edster.jdl --force
-echo ".goose" >> .gitignore
+#jhipster jdl edster.jdl --force
+#echo ".goose" >> .gitignore

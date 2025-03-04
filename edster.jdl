@@ -12,7 +12,7 @@ application {
     databaseType sql
     devDatabaseType postgresql
     prodDatabaseType postgresql
-    testFrameworks [cucumber, cypress]
+    testFrameworks [cucumber, cypress, gatling]
     clientTheme darkly
     clientThemeVariant primary
     nativeLanguage fr
@@ -20,7 +20,7 @@ application {
     reactive true
     enableSwaggerCodegen true
   }
-  entities Presentation, AsciidocSlide, ImageResource, LinkResource, PlantUMLDiagramResource, QRCodeResource
+  entities Workspace, Presentation, AsciidocSlide, ImageResource, LinkResource, PlantUMLDiagramResource, QRCodeResource
 }
 
 dto * with mapstruct
@@ -37,6 +37,13 @@ enum DocumentResourceType {
 entity Presentation {
   plan String required
   uri String required
+  promptUserMessage String
+}
+
+entity Workspace {
+  name String required
+  description String
+  promptSystemMessage String
 }
 
 entity AsciidocSlide {
@@ -70,11 +77,15 @@ entity QRCodeResource {
   data String
 }
 
-//relationship ManyToOne {
-//  Presentation to User{required} with builtInEntity
-//  AsciidocSlide to Presentation
-//  ImageResource to AsciidocSlide
-//  LinkResource to AsciidocSlide
-//  PlantUMLDiagramResource to AsciidocSlide
-//  QRCodeResource to AsciidocSlide
-//}
+relationship OneToOne {
+   Workspace{user(login)} to @OnUpdate("CASCADE") User with builtInEntity,
+}
+
+relationship ManyToOne {
+  Presentation to @OnUpdate("CASCADE") Workspace{presentations}
+  AsciidocSlide to @OnUpdate("CASCADE") Presentation{slides},
+  ImageResource to @OnUpdate("CASCADE") AsciidocSlide{images},
+  LinkResource to @OnUpdate("CASCADE") AsciidocSlide{links},
+  PlantUMLDiagramResource to @OnUpdate("CASCADE") AsciidocSlide{diagrams},
+  QRCodeResource to @OnUpdate("CASCADE") AsciidocSlide{qrcodes},
+}
