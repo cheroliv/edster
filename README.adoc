@@ -1,0 +1,117 @@
+= Edster Application
+
+Edster is an application based on JHipster, designed to create and generate presentations. It leverages the JHipster platform to quickly develop and deploy modern presentation generating applications.
+
+== Generating the Codebase
+
+The Edster codebase can be generated using the `jdl.sh` script. This script processes a JDL (JHipster Domain Language) file to define the application's entities, relationships, and configurations.
+
+*Note: Before running the `jdl.sh` script for the first time, you need to make it executable using the following command:*
+
+[source,bash]
+----
+chmod u+x jdl.sh
+----
+
+To generate the codebase:
+
+. Execute the `jdl.sh` script:
++
+[source,bash]
+----
+./jdl.sh <your_jdl_file>.jdl
+----
+
+This command will:
+
+*   Parse the JDL file.
+*   Generate the necessary application code based on the JDL definition.
+
+Ensure that you have the necessary JHipster environment set up.
+
+== Cleaning the Generated Code
+
+If you need to clean the generated code, you can use the `clean.sh` script.
+
+*Note: Before running the `clean.sh` script for the first time, you need to make it executable using the following command:*
+
+[source,bash]
+----
+chmod u+x clean.sh
+----
+
+To clean the generated code:
+
+. Execute the `clean.sh` script:
++
+[source,bash]
+----
+./clean.sh
+----
+
+This command will remove the generated code, allowing you to regenerate it using the `jdl.sh` script.
+
+== Development Mode
+
+To run the application in development mode, use the following steps:
+
+. Start the development environment:
++
+[source,bash]
+----
+./gradlew
+----
+
+This command will start the backend server with hot reloading enabled. The frontend is served by the webpack dev server.
+
+. Access the application in your browser:
++
+http://localhost:9000
+
+. Development-specific configurations:
+* Profile: `dev`
+* Hot reloading for backend changes
+* Webpack dev server for frontend
+* H2 database (if not configured differently)
+
+== Production Mode
+
+To run the application in production mode, use the following steps:
+
+. Build the production-ready package:
++
+[source,bash]
+----
+./gradlew -Pprod clean build
+----
+
+This command will:
+
+*   Compile the Java code
+*   Run tests
+*   Package the application into a deployable archive (`.war` or `.jar` or `.gradle` )
+*   Optimize the frontend assets
+
+. Run the application:
++
+[source,bash]
+----
+java -jar build/libs/*.jar
+----
+
+This command will start the application using the production profile.
+
+. Access the application in your browser:
++
+http://localhost:8080
+
+. Production-specific configurations:
+* Profile: `prod`
+* Optimized and minified frontend assets
+* No hot reloading
+* Production database (e.g., PostgreSQL, MySQL)
+
+== Additional Information
+
+*   Refer to the Edster documentation for more details: [Edster Documentation](replace_with_edster_documentation_link)
+*   Consult the application's specific documentation for details about configuration and deployment.
