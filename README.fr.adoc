@@ -1,0 +1,134 @@
+= Application Edster
+
+Edster est une application basée sur JHipster, conçue pour créer et générer des présentations. Elle exploite la plateforme JHipster pour développer et déployer rapidement des applications modernes de génération de présentations.
+
+== Génération du code source
+
+Le code source d'Edster peut être généré à l'aide du script `jdl.sh`. Ce script traite un fichier JDL (JHipster Domain Language) pour définir les entités, les relations et les configurations de l'application.
+
+*Note : Avant d'exécuter le script `jdl.sh` pour la première fois, vous devez le rendre exécutable à l'aide de la commande suivante :*
+
+[source,bash]
+----
+chmod u+x jdl.sh
+----
+
+Pour générer le code source :
+
+. Exécutez le script `jdl.sh` :
++
+[source,bash]
+----
+./jdl.sh <votre_fichier_jdl>.jdl
+----
+
+Cette commande va :
+
+*   Analyser le fichier JDL.
+*   Générer le code d'application nécessaire en fonction de la définition JDL.
+
+Assurez-vous que le script `jdl.sh` est exécutable et que vous avez l'environnement JHipster nécessaire configuré.
+
+== Nettoyage du code généré
+
+Si vous devez nettoyer le code généré, vous pouvez utiliser le script `clean.sh`.
+
+*Note : Avant d'exécuter le script `clean.sh` pour la première fois, vous devez le rendre exécutable à l'aide de la commande suivante :*
+
+[source,bash]
+----
+chmod u+x clean.sh
+----
+
+Pour nettoyer le code généré :
+
+. Exécutez le script `clean.sh` :
++
+[source,bash]
+----
+./clean.sh
+----
+
+Cette commande supprimera le code généré, vous permettant de le régénérer à l'aide du script `jdl.sh`.
+
+== Mode Développement
+
+Pour exécuter l'application en mode développement, suivez les étapes suivantes :
+
+. Démarrez l'environnement de développement :
++
+[source,bash]
+----
+./gradlew
+----
+
+Cette commande démarrera le serveur backend avec le rechargement à chaud activé. Le frontend est servi par le serveur de développement webpack.
+
+. Accédez à l'application dans votre navigateur :
++
+http://localhost:9000
+
+. Configurations spécifiques au développement :
+* Profil : `dev`
+* Rechargement à chaud pour les modifications du backend
+* Serveur de développement Webpack pour le frontend
+* Base de données H2 (si elle n'est pas configurée différemment)
+
+== Mode Production
+
+Pour exécuter l'application en mode production, suivez les étapes suivantes :
+
+. Construisez le package prêt pour la production :
++
+[source,bash]
+----
+./gradlew -Pprod clean build
+----
+
+Cette commande va :
+
+*   Compiler le code Java
+*   Exécuter les tests
+*   Empaqueter l'application dans une archive déployable (`.war` ou `.jar` ou `.gradle`)
+*   Optimiser les ressources du frontend
+
+. Exécutez l'application :
++
+[source,bash]
+----
+java -jar build/libs/*.jar
+----
+
+Cette commande démarrera l'application en utilisant le profil de production.
+
+. Accédez à l'application dans votre navigateur :
++
+http://localhost:8080
+
+. Configurations spécifiques à la production :
+* Profil : `prod`
+* Ressources frontend optimisées et minifiées
+* Pas de rechargement à chaud
+* Base de données de production (par exemple, PostgreSQL, MySQL)
+
+== Itération de développement
+
+Pendant le développement, vous pouvez exécuter le backend et le frontend séparément pour une itération plus rapide.
+
+. Pour exécuter uniquement le backend :
++
+[source,bash]
+----
+pnpm run backend:start
+----
+
+Cette commande démarrera le serveur backend.
+
+. Pour exécuter le frontend en mode surveillance :
++
+[source,bash]
+----
+pnpm run start
+----
+
+Cette commande démarrera le serveur de développement frontend avec le rechargement à chaud, vous permettant de voir les modifications en temps réel.
