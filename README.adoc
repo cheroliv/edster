@@ -111,7 +111,7 @@ http://localhost:8080
 * No hot reloading
 * Production database (e.g., PostgreSQL, MySQL)
 
-== Additional Information
-
-*   Refer to the Edster documentation for more details: [Edster Documentation](replace_with_edster_documentation_link)
-*   Consult the application's specific documentation for details about configuration and deployment.
+// == Additional Information
+//
+// *   Refer to the Edster documentation for more details: [Edster Documentation](replace_with_edster_documentation_link)
+// *   Consult the application's specific documentation for details about configuration and deployment.
