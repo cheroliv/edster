@@ -111,7 +111,24 @@ http://localhost:8080
 * No hot reloading
 * Production database (e.g., PostgreSQL, MySQL)
 
-// == Additional Information
-//
-// *   Refer to the Edster documentation for more details: [Edster Documentation](replace_with_edster_documentation_link)
-// *   Consult the application's specific documentation for details about configuration and deployment.
+== Development Iteration
+
+During development, you can run the backend and frontend separately for faster iteration.
+
+. To run only the backend:
++
+[source,bash]
+----
+pnpm run backend:start
+----
+
+This command will start the backend server.
+
+. To run the frontend in watch mode:
++
+[source,bash]
+----
+pnpm run start
+----
+
+This command will start the frontend development server with hot reloading, allowing you to see changes in real-time.
