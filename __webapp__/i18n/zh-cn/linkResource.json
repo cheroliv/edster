@@ -1,0 +1,27 @@
+{
+  "edsterApp": {
+    "linkResource": {
+      "home": {
+        "title": "Link Resources",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "创建新 Link Resource",
+        "createOrEditLabel": "创建或编辑 Link Resource",
+        "notFound": "No Link Resources found"
+      },
+      "created": "Link Resource {{ param }} 创建成功",
+      "updated": "Link Resource {{ param }} 更新成功",
+      "deleted": "Link Resource {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Link Resource {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Link Resource"
+      },
+      "id": "ID",
+      "type": "Type",
+      "uri": "Uri",
+      "target": "Target",
+      "asciidocSlide": "Asciidoc Slide"
+    }
+  }
+}

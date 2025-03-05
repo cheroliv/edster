@@ -1,0 +1,27 @@
+{
+  "edsterApp": {
+    "qRCodeResource": {
+      "home": {
+        "title": "QR Code Resources",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new QR Code Resource",
+        "createOrEditLabel": "Create or edit a QR Code Resource",
+        "notFound": "No QR Code Resources found"
+      },
+      "created": "A new QR Code Resource is created with identifier {{ param }}",
+      "updated": "A QR Code Resource is updated with identifier {{ param }}",
+      "deleted": "A QR Code Resource is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete QR Code Resource {{ id }}?"
+      },
+      "detail": {
+        "title": "QR Code Resource"
+      },
+      "id": "ID",
+      "type": "Type",
+      "uri": "Uri",
+      "data": "Data",
+      "asciidocSlide": "Asciidoc Slide"
+    }
+  }
+}

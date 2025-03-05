@@ -1,0 +1,32 @@
+{
+  "edsterApp": {
+    "asciidocSlide": {
+      "home": {
+        "title": "Asciidoc Slides",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "创建新 Asciidoc Slide",
+        "createOrEditLabel": "创建或编辑 Asciidoc Slide",
+        "notFound": "No Asciidoc Slides found"
+      },
+      "created": "Asciidoc Slide {{ param }} 创建成功",
+      "updated": "Asciidoc Slide {{ param }} 更新成功",
+      "deleted": "Asciidoc Slide {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Asciidoc Slide {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Asciidoc Slide"
+      },
+      "id": "ID",
+      "title": "Title",
+      "content": "Content",
+      "notes": "Notes",
+      "num": "Num",
+      "presentation": "Presentation",
+      "images": "Images",
+      "links": "Links",
+      "diagrams": "Diagrams",
+      "qrcodes": "Qrcodes"
+    }
+  }
+}

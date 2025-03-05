@@ -16,7 +16,7 @@ application {
     clientTheme darkly
     clientThemeVariant primary
     nativeLanguage fr
-    languages [fr, en, ru, es, ar-ly, zh-cn, pt-br, de]
+    languages [fr, en, es]
     reactive true
     enableSwaggerCodegen true
   }

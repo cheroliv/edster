@@ -1,0 +1,27 @@
+{
+  "edsterApp": {
+    "imageResource": {
+      "home": {
+        "title": "Image Resources",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Image Resource",
+        "createOrEditLabel": "Создать или отредактировать Image Resource",
+        "notFound": "Image Resources не найдено"
+      },
+      "created": "Новый Image Resource создан с идентификатором {{ param }}",
+      "updated": "Image Resource обновлен с идентификатором {{ param }}",
+      "deleted": "Image Resource удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Image Resource {{ id }}?"
+      },
+      "detail": {
+        "title": "Image Resource"
+      },
+      "id": "ID",
+      "type": "Type",
+      "uri": "Uri",
+      "resolution": "Resolution",
+      "asciidocSlide": "Asciidoc Slide"
+    }
+  }
+}

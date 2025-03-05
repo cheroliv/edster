@@ -1,0 +1,28 @@
+{
+  "edsterApp": {
+    "workspace": {
+      "home": {
+        "title": "Workspaces",
+        "refreshListLabel": "تحديث القائمة",
+        "createLabel": "إنشاء Workspace جديد",
+        "createOrEditLabel": "إنشاء أو تعديل Workspace",
+        "notFound": "لم يتم العثور على Workspaces"
+      },
+      "created": "Workspace جديد تم إنشاؤه بالمعرف {{ param }}",
+      "updated": "Workspace تم تحديثه بالمعرف {{ param }}",
+      "deleted": "Workspace تم حذفه بالمعرف {{ param }}",
+      "delete": {
+        "question": "هل أنت متأكد أنك تريد حذف Workspace {{ id }}؟"
+      },
+      "detail": {
+        "title": "Workspace"
+      },
+      "id": "ID",
+      "name": "Name",
+      "description": "Description",
+      "promptSystemMessage": "Prompt System Message",
+      "user": "User",
+      "presentations": "Presentations"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "edsterApp": {
+    "plantUMLDiagramResource": {
+      "home": {
+        "title": "Plant UML Diagram Resources",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Plant UML Diagram Resource",
+        "createOrEditLabel": "Создать или отредактировать Plant UML Diagram Resource",
+        "notFound": "Plant UML Diagram Resources не найдено"
+      },
+      "created": "Новый Plant UML Diagram Resource создан с идентификатором {{ param }}",
+      "updated": "Plant UML Diagram Resource обновлен с идентификатором {{ param }}",
+      "deleted": "Plant UML Diagram Resource удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Plant UML Diagram Resource {{ id }}?"
+      },
+      "detail": {
+        "title": "Plant UML Diagram Resource"
+      },
+      "id": "ID",
+      "type": "Type",
+      "uri": "Uri",
+      "umlCode": "Uml Code",
+      "asciidocSlide": "Asciidoc Slide"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "edsterApp": {
+    "presentation": {
+      "home": {
+        "title": "Presentations",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Presentation erstellen",
+        "createOrEditLabel": "Presentation erstellen oder bearbeiten",
+        "notFound": "Keine Presentations gefunden"
+      },
+      "created": "Presentation erstellt mit ID {{ param }}",
+      "updated": "Presentation aktualisiert mit ID {{ param }}",
+      "deleted": "Presentation gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Presentation {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Presentation"
+      },
+      "id": "ID",
+      "plan": "Plan",
+      "uri": "Uri",
+      "promptUserMessage": "Prompt User Message",
+      "workspace": "Workspace",
+      "slides": "Slides"
+    }
+  }
+}

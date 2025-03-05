@@ -1,0 +1,28 @@
+{
+  "edsterApp": {
+    "workspace": {
+      "home": {
+        "title": "Workspaces",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Workspace",
+        "createOrEditLabel": "Создать или отредактировать Workspace",
+        "notFound": "Workspaces не найдено"
+      },
+      "created": "Новый Workspace создан с идентификатором {{ param }}",
+      "updated": "Workspace обновлен с идентификатором {{ param }}",
+      "deleted": "Workspace удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Workspace {{ id }}?"
+      },
+      "detail": {
+        "title": "Workspace"
+      },
+      "id": "ID",
+      "name": "Name",
+      "description": "Description",
+      "promptSystemMessage": "Prompt System Message",
+      "user": "User",
+      "presentations": "Presentations"
+    }
+  }
+}

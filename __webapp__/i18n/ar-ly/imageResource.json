@@ -1,0 +1,27 @@
+{
+  "edsterApp": {
+    "imageResource": {
+      "home": {
+        "title": "Image Resources",
+        "refreshListLabel": "تحديث القائمة",
+        "createLabel": "إنشاء Image Resource جديد",
+        "createOrEditLabel": "إنشاء أو تعديل Image Resource",
+        "notFound": "لم يتم العثور على Image Resources"
+      },
+      "created": "Image Resource جديد تم إنشاؤه بالمعرف {{ param }}",
+      "updated": "Image Resource تم تحديثه بالمعرف {{ param }}",
+      "deleted": "Image Resource تم حذفه بالمعرف {{ param }}",
+      "delete": {
+        "question": "هل أنت متأكد أنك تريد حذف Image Resource {{ id }}؟"
+      },
+      "detail": {
+        "title": "Image Resource"
+      },
+      "id": "ID",
+      "type": "Type",
+      "uri": "Uri",
+      "resolution": "Resolution",
+      "asciidocSlide": "Asciidoc Slide"
+    }
+  }
+}

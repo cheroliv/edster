@@ -1,0 +1,11 @@
+{
+  "edsterApp": {
+    "DocumentResourceType": {
+      "null": "",
+      "IMAGE": "IMAGE",
+      "LINK": "LINK",
+      "PLANTUML": "PLANTUML",
+      "QRCODE": "QRCODE"
+    }
+  }
+}

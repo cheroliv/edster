@@ -1,0 +1,27 @@
+{
+  "edsterApp": {
+    "plantUMLDiagramResource": {
+      "home": {
+        "title": "Plant UML Diagram Resources",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "创建新 Plant UML Diagram Resource",
+        "createOrEditLabel": "创建或编辑 Plant UML Diagram Resource",
+        "notFound": "No Plant UML Diagram Resources found"
+      },
+      "created": "Plant UML Diagram Resource {{ param }} 创建成功",
+      "updated": "Plant UML Diagram Resource {{ param }} 更新成功",
+      "deleted": "Plant UML Diagram Resource {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Plant UML Diagram Resource {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Plant UML Diagram Resource"
+      },
+      "id": "ID",
+      "type": "Type",
+      "uri": "Uri",
+      "umlCode": "Uml Code",
+      "asciidocSlide": "Asciidoc Slide"
+    }
+  }
+}

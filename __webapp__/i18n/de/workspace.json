@@ -1,0 +1,28 @@
+{
+  "edsterApp": {
+    "workspace": {
+      "home": {
+        "title": "Workspaces",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Workspace erstellen",
+        "createOrEditLabel": "Workspace erstellen oder bearbeiten",
+        "notFound": "Keine Workspaces gefunden"
+      },
+      "created": "Workspace erstellt mit ID {{ param }}",
+      "updated": "Workspace aktualisiert mit ID {{ param }}",
+      "deleted": "Workspace gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Workspace {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Workspace"
+      },
+      "id": "ID",
+      "name": "Name",
+      "description": "Description",
+      "promptSystemMessage": "Prompt System Message",
+      "user": "User",
+      "presentations": "Presentations"
+    }
+  }
+}
