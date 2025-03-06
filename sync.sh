@@ -1,3 +1,5 @@
 #!/bin/bash
 
-rsync -avr __webapp__/ src/main/webapp;
+rsync -av __codebase__/build.gradle .;
+rsync -avr __codebase__/gradle/ ./gradle;
+rsync -avr __codebase__/src/ ./src;

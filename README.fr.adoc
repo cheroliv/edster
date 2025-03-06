@@ -124,8 +124,7 @@ pnpm run backend:start
 
 Cette commande démarrera le serveur backend.
 
-. Pour exécuter le frontend en mode surveillance :
-+
+. Pour exécuter le frontend en mode live-reload :
 [source,bash]
 ----
 pnpm run start

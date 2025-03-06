@@ -124,7 +124,7 @@ pnpm run backend:start
 
 This command will start the backend server.
 
-. To run the frontend in watch mode:
+. To run the frontend in live-reload mode:
 +
 [source,bash]
 ----
