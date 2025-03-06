@@ -131,3 +131,25 @@ pnpm run start
 ----
 
 Cette commande démarrera le serveur de développement frontend avec le rechargement à chaud, vous permettant de voir les modifications en temps réel.
+
+== Synchronisation du code source
+
+Le script `sync.sh` permet de synchroniser les modifications manuelles du code avec le code source généré par JDL. Cela garantit que les personnalisations sont conservées lors de la régénération de l'application à l'aide de `jdl.sh`.
+
+*Note : Avant d'exécuter le script `sync.sh` pour la première fois, vous devez le rendre exécutable à l'aide de la commande suivante :*
+
+[source,bash]
+----
+chmod u+x sync.sh
+----
+
+Pour synchroniser le code source :
+
+. Exécutez le script `sync.sh` :
++
+[source,bash]
+----
+./sync.sh
+----
+
+Ce script identifiera et fusionnera vos modifications manuelles dans le code nouvellement généré, minimisant les conflits et préservant vos personnalisations.

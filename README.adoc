@@ -19,7 +19,7 @@ To generate the codebase:
 +
 [source,bash]
 ----
-./jdl.sh
+./jdl.sh <your_jdl_file>.jdl
 ----
 
 This command will:
@@ -124,7 +124,7 @@ pnpm run backend:start
 
 This command will start the backend server.
 
-. To run the frontend in live-reload mode:
+. To run the frontend in watch mode:
 +
 [source,bash]
 ----
@@ -132,3 +132,25 @@ pnpm run start
 ----
 
 This command will start the frontend development server with hot reloading, allowing you to see changes in real-time.
+
+== Synchronizing the Codebase
+
+The `sync.sh` script helps synchronize manual code changes with the JDL-generated codebase. This ensures that customizations are preserved when regenerating the application using `jdl.sh`.
+
+*Note: Before running the `sync.sh` script for the first time, you need to make it executable using the following command:*
+
+[source,bash]
+----
+chmod u+x sync.sh
+----
+
+To synchronize the codebase:
+
+. Execute the `sync.sh` script:
++
+[source,bash]
+----
+./sync.sh
+----
+
+This script will identify and merge your manual changes into the newly generated code, minimizing conflicts and preserving your customizations.
