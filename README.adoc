@@ -19,7 +19,7 @@ To generate the codebase:
 +
 [source,bash]
 ----
-./jdl.sh <your_jdl_file>.jdl
+./jdl.sh
 ----
 
 This command will:

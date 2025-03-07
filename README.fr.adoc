@@ -19,7 +19,7 @@ Pour générer le code source :
 +
 [source,bash]
 ----
-./jdl.sh <votre_fichier_jdl>.jdl
+./jdl.sh
 ----
 
 Cette commande va :
