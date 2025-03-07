@@ -1,13 +1,13 @@
 {
   "global": {
-    "title": "Edster",
+    "title": "cccp.education",
     "browsehappy": "Está usando un navegador <strong>no actualizado</strong>. Por favor, <a href=\"http://browsehappy.com/?locale=es\">actualice su navegador</a> para mejorar su experiencia.",
     "menu": {
       "home": "Inicio",
-      "jhipster-needle-menu-add-element": "Edster will add additional menu entries here (do not translate!)",
+      "jhipster-needle-menu-add-element": "cccp.education will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entidades",
-        "jhipster-needle-menu-add-entry": "Edster will add additional entities here (do not translate!)",
+        "jhipster-needle-menu-add-entry": "cccp.education will add additional entities here (do not translate!)",
         "workspace": "Workspace",
         "presentation": "Presentation",
         "asciidocSlide": "Asciidoc Slide",
@@ -35,7 +35,7 @@
         "logs": "Logs",
         "apidocs": "API",
         "database": "Base de datos",
-        "jhipster-needle-menu-add-admin-element": "Edster will add additional menu entries here (do not translate!)"
+        "jhipster-needle-menu-add-admin-element": "cccp.education will add additional menu entries here (do not translate!)"
       },
       "language": "Idioma"
     },
