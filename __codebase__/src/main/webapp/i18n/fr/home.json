@@ -1,6 +1,6 @@
 {
   "home": {
-    "title": "Bienvenue sur cccp.education !",
+    "title": "Bienvenue sur cccp.education!",
     "subtitle": "La plateforme des outils de communication.",
     "logged": {
       "message": "Vous êtes connecté en tant que \"{{username}}\"."
