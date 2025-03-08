@@ -1,0 +1,17 @@
+.footer {
+  background-color: #f8f9fa; /* Light gray background */
+  padding: 20px 0;
+  margin-top: 20px; /* Add some space above the footer */
+
+  a {
+    color: #007bff; /* Bootstrap primary color for links */
+
+    &:hover {
+      color: #0056b3; /* Darker shade on hover */
+    }
+  }
+
+  .list-inline-item {
+    margin: 0 10px;
+  }
+}
