@@ -10,7 +10,7 @@ The Edster codebase can be generated using the `jdl.sh` script. This script proc
 
 [source,bash]
 ----
-chmod u+x jdl.sh
+chmod u+x scripts/jdl.sh
 ----
 
 To generate the codebase:
@@ -19,7 +19,7 @@ To generate the codebase:
 +
 [source,bash]
 ----
-./jdl.sh
+./scripts/jdl.sh
 ----
 
 This command will:
@@ -37,7 +37,7 @@ If you need to clean the generated code, you can use the `clean.sh` script.
 
 [source,bash]
 ----
-chmod u+x clean.sh
+chmod u+x scripts/clean.sh
 ----
 
 To clean the generated code:
@@ -46,7 +46,7 @@ To clean the generated code:
 +
 [source,bash]
 ----
-./clean.sh
+./scripts/clean.sh
 ----
 
 This command will remove the generated code, allowing you to regenerate it using the `jdl.sh` script.
@@ -66,7 +66,7 @@ This command will start the backend server with hot reloading enabled. The front
 
 . Access the application in your browser:
 +
-http://localhost:9000
+http://localhost:8080
 
 . Development-specific configurations:
 * Profile: `dev`
@@ -103,7 +103,7 @@ This command will start the application using the production profile.
 
 . Access the application in your browser:
 +
-http://localhost:8080
+http://localhost:8080/
 
 . Production-specific configurations:
 * Profile: `prod`
@@ -122,7 +122,9 @@ During development, you can run the backend and frontend separately for faster i
 pnpm run backend:start
 ----
 
-This command will start the backend server.
+This command will start the backend server on :
++
+http://localhost:8080/
 
 . To run the frontend in watch mode:
 +
@@ -131,7 +133,10 @@ This command will start the backend server.
 pnpm run start
 ----
 
-This command will start the frontend development server with hot reloading, allowing you to see changes in real-time.
+This command will start the frontend development server with hot reloading, allowing you to see changes in real-time on :
++
+http://localhost:9001/
+
 
 == Synchronizing the Codebase
 
@@ -141,7 +146,7 @@ The `sync.sh` script helps synchronize manual code changes with the JDL-generate
 
 [source,bash]
 ----
-chmod u+x sync.sh
+chmod u+x scripts/sync.sh
 ----
 
 To synchronize the codebase:
@@ -150,7 +155,7 @@ To synchronize the codebase:
 +
 [source,bash]
 ----
-./sync.sh
+./scripts/sync.sh
 ----
 
 This script will identify and merge your manual changes into the newly generated code, minimizing conflicts and preserving your customizations.

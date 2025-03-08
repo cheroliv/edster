@@ -10,7 +10,7 @@ Le code source d'Edster peut être généré à l'aide du script `jdl.sh`. Ce sc
 
 [source,bash]
 ----
-chmod u+x jdl.sh
+chmod u+x scripts/jdl.sh
 ----
 
 Pour générer le code source :
@@ -19,7 +19,7 @@ Pour générer le code source :
 +
 [source,bash]
 ----
-./jdl.sh
+./scripts/jdl.sh
 ----
 
 Cette commande va :
@@ -37,7 +37,7 @@ Si vous devez nettoyer le code généré, vous pouvez utiliser le script `clean.
 
 [source,bash]
 ----
-chmod u+x clean.sh
+chmod u+x scripts/clean.sh
 ----
 
 Pour nettoyer le code généré :
@@ -46,7 +46,7 @@ Pour nettoyer le code généré :
 +
 [source,bash]
 ----
-./clean.sh
+./scripts/clean.sh
 ----
 
 Cette commande supprimera le code généré, vous permettant de le régénérer à l'aide du script `jdl.sh`.
@@ -66,7 +66,7 @@ Cette commande démarrera le serveur backend avec le rechargement à chaud activ
 
 . Accédez à l'application dans votre navigateur :
 +
-http://localhost:9000
+http://localhost:8080/
 
 . Configurations spécifiques au développement :
 * Profil : `dev`
@@ -103,7 +103,7 @@ Cette commande démarrera l'application en utilisant le profil de production.
 
 . Accédez à l'application dans votre navigateur :
 +
-http://localhost:8080
+http://localhost:8080/
 
 . Configurations spécifiques à la production :
 * Profil : `prod`
@@ -122,7 +122,10 @@ Pendant le développement, vous pouvez exécuter le backend et le frontend sépa
 pnpm run backend:start
 ----
 
-Cette commande démarrera le serveur backend.
+Cette commande démarrera le serveur backend à :
++
+http://localhost:8080/
+
 
 . Pour exécuter le frontend en mode live-reload :
 [source,bash]
@@ -130,7 +133,9 @@ Cette commande démarrera le serveur backend.
 pnpm run start
 ----
 
-Cette commande démarrera le serveur de développement frontend avec le rechargement à chaud, vous permettant de voir les modifications en temps réel.
+Cette commande démarrera le serveur de développement frontend avec le rechargement à chaud, vous permettant de voir les modifications en temps réel à :
++
+http://localhost:9001/
 
 == Synchronisation du code source
 
@@ -140,7 +145,7 @@ Le script `sync.sh` permet de synchroniser les modifications manuelles du code a
 
 [source,bash]
 ----
-chmod u+x sync.sh
+chmod u+x scripts/sync.sh
 ----
 
 Pour synchroniser le code source :
@@ -149,7 +154,7 @@ Pour synchroniser le code source :
 +
 [source,bash]
 ----
-./sync.sh
+./scripts/sync.sh
 ----
 
 Ce script identifiera et fusionnera vos modifications manuelles dans le code nouvellement généré, minimisant les conflits et préservant vos personnalisations.

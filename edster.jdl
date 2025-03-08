@@ -78,14 +78,14 @@ entity QRCodeResource {
 }
 
 relationship OneToOne {
-   Workspace{user(login)} to @OnUpdate("CASCADE") User with builtInEntity,
+  @OnUpdate("CASCADE") @OnDelete("CASCADE") Workspace{user(login)} to User{workspace} with builtInEntity,
 }
 
 relationship ManyToOne {
-  Presentation to @OnUpdate("CASCADE") Workspace{presentations}
-  AsciidocSlide to @OnUpdate("CASCADE") Presentation{slides},
-  ImageResource to @OnUpdate("CASCADE") AsciidocSlide{images},
-  LinkResource to @OnUpdate("CASCADE") AsciidocSlide{links},
-  PlantUMLDiagramResource to @OnUpdate("CASCADE") AsciidocSlide{diagrams},
-  QRCodeResource to @OnUpdate("CASCADE") AsciidocSlide{qrcodes},
+  Presentation to @OnUpdate("CASCADE") @OnDelete("CASCADE") Workspace{presentations},
+  AsciidocSlide to @OnUpdate("CASCADE") @OnDelete("CASCADE") Presentation{slides},
+  ImageResource to @OnUpdate("CASCADE") @OnDelete("CASCADE") AsciidocSlide{images},
+  LinkResource to @OnUpdate("CASCADE") @OnDelete("CASCADE") AsciidocSlide{links},
+  PlantUMLDiagramResource to @OnUpdate("CASCADE") @OnDelete("CASCADE")  AsciidocSlide{diagrams},
+  QRCodeResource to @OnUpdate("CASCADE") @OnDelete("CASCADE") AsciidocSlide{qrcodes},
 }
