@@ -1,8 +1,5 @@
 #!/bin/bash
 
-set -e # Exit immediately if a command fails
-set -u # Exit immediately if a variable is not set
-
 # Define the expected directory name
 EXPECTED_DIR_NAME="edster"
 
