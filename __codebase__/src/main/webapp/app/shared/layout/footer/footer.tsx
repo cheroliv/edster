@@ -35,6 +35,11 @@ const Footer = () => {
                   About
                 </a>
               </li>
+              <li className="list-inline-item">
+                <a style={{ color: 'white' }} href="mailto:contact@cccp.education">
+                  Contact
+                </a>
+              </li>
             </ul>
           </div>
         </div>
