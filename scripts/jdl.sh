@@ -19,4 +19,5 @@ fi
 jhipster jdl edster.jdl --force;
 echo ".goose" >> .gitignore;
 ./scripts/sync.sh;
+pnpm i bootstrap-icons;
 #jhipster ci-cd;
