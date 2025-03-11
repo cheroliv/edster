@@ -159,3 +159,14 @@ To synchronize the codebase:
 ----
 
 This script will identify and merge your manual changes into the newly generated code, minimizing conflicts and preserving your customizations.
+
+=== Add an entry to .gitignore
+
+==== Add the .goose folder to .gitignore
+
+In order to add the .goose folder to .gitignore file, you must add this code at the end of the jdl.sh file
+
+[source,bash]
+----
+echo ".goose" >> .gitignore;
+----

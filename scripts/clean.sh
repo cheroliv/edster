@@ -27,6 +27,7 @@ fi;
 echo "Tables in schema '$SCHEMA_NAME' been dropped.";
 
 rm -R .devcontainer;
+rm -R .github;
 rm -R .goose;
 rm -R .gradle;
 rm -R .husky;
@@ -47,6 +48,7 @@ rm -R build/webpack;
 
 rm build/resolvedMainClassName;
 rm .editorconfig;
+rm .gitignore;
 rm .gitattributes;
 rm .lintstagedrc.cjs;
 rm .prettierignore;
@@ -74,3 +76,4 @@ rm settings.gradle;
 rm sonar-project.properties;
 rm tsconfig.json;
 rm tsconfig.test.json;
+rm local.properties

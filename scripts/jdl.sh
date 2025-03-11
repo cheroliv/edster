@@ -19,3 +19,4 @@ fi
 jhipster jdl edster.jdl --force;
 echo ".goose" >> .gitignore;
 ./scripts/sync.sh;
+#jhipster ci-cd;
