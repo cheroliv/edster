@@ -5,9 +5,6 @@ const Footer = () => {
     <footer className="footer">
       <div className="container">
         <div className="row">
-          <div className="col-md-6">
-            <p>&copy; {new Date().getFullYear()} cccp.education. All rights reserved.</p>
-          </div>
           <div className="col-md-6 text-md-right">
             <ul className="list-inline">
               <li className="list-inline-item">
@@ -31,16 +28,21 @@ const Footer = () => {
                 </a>
               </li>
               <li className="list-inline-item">
-                <a style={{ color: 'white' }} href="https://cheroliv.github.io/about.html" target="_blank" rel="noopener noreferrer">
-                  About
-                </a>
-              </li>
-              <li className="list-inline-item">
                 <a style={{ color: 'white' }} href="mailto:contact@cccp.education">
                   Contact
                 </a>
               </li>
+              <li className="list-inline-item">
+                <a style={{ color: 'white' }} href="https://cheroliv.github.io/about.html" target="_blank" rel="noopener noreferrer">
+                  About
+                </a>
+              </li>
             </ul>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-6 text-md-left">
+            <p>&copy; {new Date().getFullYear()} cccp.education. All rights reserved.</p>
           </div>
         </div>
       </div>
