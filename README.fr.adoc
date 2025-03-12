@@ -171,3 +171,26 @@ Afin d'ajouter le dossier `.goose` au fichier `.gitignore`, vous devez ajouter c
 ----
 echo ".goose" >> .gitignore;
 ----
+
+=== Exécution séparée de l'application front-end et back-end en mode développement sur un seul terminal
+
+Pour exécuter séparément l'application front-end et back-end en mode développement sur un seul terminal, vous pouvez suivre les étapes suivantes :
+
+[source,bash]
+----
+./npmw run backend:start &;npm run start;
+----
+
+Un seul Ctrl+C arrêtera uniquement le front-end. Pour arrêter le back-end, vous devrez trouver l'identifiant du processus et le tuer, comme ceci :
+
+[source,bash]
+----
+killall -9 java
+----
+
+Pour relancer le front-end :
+
+[source,bash]
+----
+npm run start;
+----

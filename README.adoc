@@ -59,7 +59,7 @@ To run the application in development mode, use the following steps:
 +
 [source,bash]
 ----
-npm run app:start;
+./npmw run app:start;
 ----
 
 This command will start the backend server with hot reloading enabled. The frontend is served by the webpack dev server.
@@ -132,7 +132,7 @@ http://localhost:8080/
 +
 [source,bash]
 ----
-npm run start;
+./npmw run start;
 ----
 
 This command will start the frontend development server with hot reloading, allowing you to see changes in real-time on :
@@ -171,4 +171,24 @@ In order to add the .goose folder to .gitignore file, you must add this code at 
 [source,bash]
 ----
 echo ".goose" >> .gitignore;
+----
+
+=== Running the Application front and back end separately in development mode on one terminal.
+
+To run the application front and back end separately in development mode on one terminal, you can use the following steps:
+[source,bash]
+----
+./npmw run backend:start &;npm run start;
+----
+
+One ctrl+c will stop the front only. To stop backend, you will need to find the process id and kill it, like this :
+[source,bash]
+----
+killall -9 java
+----
+
+To re-run the front end :
+[source,bash]
+----
+npm run start;
 ----
