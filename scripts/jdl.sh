@@ -1,7 +1,5 @@
 #!/bin/bash
 
-nvm use lts/jod;
-
 # Define the expected directory name
 EXPECTED_DIR_NAME="edster"
 
@@ -18,8 +16,15 @@ else
 fi
 
 ./scripts/clean.sh
+
+nvm use lts/jod;
+
 jhipster jdl edster.jdl --force;
+
 echo ".goose" >> .gitignore;
+
+#workaround for fixing an issue
+pnpm i globals;
+
 ./scripts/sync.sh;
-pnpm i bootstrap-icons;
 #jhipster ci-cd;
