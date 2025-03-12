@@ -78,7 +78,7 @@ entity QRCodeResource {
 }
 
 relationship OneToOne {
-  @OnUpdate("CASCADE") @OnDelete("CASCADE") Workspace{user(login)} to User{workspace} with builtInEntity,
+  Workspace{user(login)} to @OnUpdate("CASCADE") @OnDelete("CASCADE") User{workspace} with builtInEntity,
 }
 
 relationship ManyToOne {

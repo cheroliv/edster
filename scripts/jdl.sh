@@ -17,14 +17,14 @@ fi
 
 ./scripts/clean.sh
 
-nvm use lts/jod;
-
 jhipster jdl edster.jdl --force;
 
 echo ".goose" >> .gitignore;
 
 #workaround for fixing an issue
-pnpm i globals;
+#nvm use lts/jod;
+#pnpm i globals;
+./npmw i globals;
 
 ./scripts/sync.sh;
 #jhipster ci-cd;

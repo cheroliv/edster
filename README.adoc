@@ -59,7 +59,7 @@ To run the application in development mode, use the following steps:
 +
 [source,bash]
 ----
-./gradlew
+npm run app:start;
 ----
 
 This command will start the backend server with hot reloading enabled. The frontend is served by the webpack dev server.
@@ -96,8 +96,10 @@ This command will:
 +
 [source,bash]
 ----
-java -jar build/libs/*.jar
+java -jar build/libs/edster-0.0.1.jar
 ----
+
+CAUTION: The jar file name may vary depending on the version of the application.
 
 This command will start the application using the production profile.
 
@@ -130,7 +132,7 @@ http://localhost:8080/
 +
 [source,bash]
 ----
-nvm use lts/jod; pnpm run start;
+npm run start;
 ----
 
 This command will start the frontend development server with hot reloading, allowing you to see changes in real-time on :
