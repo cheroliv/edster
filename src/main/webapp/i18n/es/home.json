@@ -1,0 +1,19 @@
+{
+  "home": {
+    "title": "Bienvenido a cccp.education",
+    "subtitle": "La plataforma de utilidades de comunicación.",
+    "logged": {
+      "message": "Está conectado como \"{{username}}\"."
+    },
+    "question": "Si tiene preguntas sobre Edster:",
+    "link": {
+      "homepage": "Página de inicio de Edster",
+      "cccp": "Creadores de Contenido Común para Profesionalizar",
+      "bugtracker": "Edster seguimiento de errores",
+      "chat": "Sala de chat pública de Edster",
+      "follow": "Sigue a @cccp.education en YouTube"
+    },
+    "like": "Si te gusta Edster, danos una estrella en",
+    "github": "GitHub"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "generator-jhipster": {
+    "applicationType": "monolith",
+    "authenticationType": "jwt",
+    "baseName": "edster",
+    "buildTool": "gradle",
+    "cacheProvider": "ehcache",
+    "clientFramework": "react",
+    "clientPackageManager": "npm",
+    "clientTheme": "darkly",
+    "clientThemeVariant": "primary",
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "enableSwaggerCodegen": true,
+    "entities": [
+      "Workspace",
+      "Presentation",
+      "AsciidocSlide",
+      "ImageResource",
+      "LinkResource",
+      "PlantUMLDiagramResource",
+      "QRCodeResource"
+    ],
+    "jhipsterVersion": "8.9.0",
+    "jwtSecretKey": "MzUwMDA5YjAxZTIxMGJhNzdkNDU1MWM2YzE2NjgxZmM2MjczOGU4NmIyYTI5NWY0NTk4NDY2NTY3NmMxOWE3MDdmYWI5MjE0NzU0ZWMyNTg2MzcwNzk2ZmIzNWYzMmNiOGVhNWU0MmU3MmI5MmNjNTQ4ZjVjZjI2ZWIwNmI5M2E=",
+    "languages": ["fr", "en", "es"],
+    "lastLiquibaseTimestamp": 1741765073000,
+    "nativeLanguage": "fr",
+    "packageName": "edtech",
+    "prodDatabaseType": "postgresql",
+    "reactive": true,
+    "testFrameworks": ["cucumber", "cypress", "gatling"]
+  }
+}

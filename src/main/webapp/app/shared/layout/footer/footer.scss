@@ -1,0 +1,72 @@
+.footer {
+  background-color: #343a40;
+  color: #ffffff !important;
+  width: 100%;
+  padding-top: 5px;
+  margin-top: 0;
+
+  .footer-link {
+    color: #ffffff !important;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 0.3rem 1rem;
+    border-radius: 4px;
+    margin-top: 0;
+
+    &:hover {
+      color: #ffffff !important;
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+  }
+
+  .footer-icon {
+    font-size: 2.5rem; /* Augmenté de 1.8rem à 2.5rem pour des icônes plus grandes */
+    color: #ffffff !important;
+    margin-right: 0.5rem;
+
+    /* Ajout d'un léger effet de brillance sur les icônes */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  }
+
+  span {
+    color: #ffffff !important;
+    font-size: 1rem;
+  }
+
+  p {
+    color: #ffffff !important;
+  }
+
+  .footer-divider {
+    border-color: rgba(255, 255, 255, 0.2);
+    margin: 0.5rem 0;
+  }
+
+  @media (max-width: 991.98px) {
+    .d-flex {
+      justify-content: center !important;
+
+      a {
+        margin: 0 1rem;
+        color: #ffffff !important;
+      }
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    text-align: center;
+  }
+}
+
+.footer-link {
+  display: flex;
+  flex-direction: column; // Met l'icône au-dessus du texte
+  align-items: center;
+  text-decoration: none;
+
+  .footer-icon {
+    font-size: 1.5rem; // Ajuste la taille des icônes
+    margin-bottom: 0.25rem; // Espacement entre l'icône et le texte
+  }
+}

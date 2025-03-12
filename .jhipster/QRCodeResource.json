@@ -1,0 +1,40 @@
+{
+  "annotations": {
+    "changelogDate": "20250312073753"
+  },
+  "applications": ["edster"],
+  "dto": "mapstruct",
+  "entityTableName": "qr_code_resource",
+  "fields": [
+    {
+      "fieldName": "type",
+      "fieldType": "DocumentResourceType",
+      "fieldValues": "IMAGE,LINK,PLANTUML,QRCODE"
+    },
+    {
+      "fieldName": "uri",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "data",
+      "fieldType": "String"
+    }
+  ],
+  "name": "QRCodeResource",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "options": {
+        "onDelete": "CASCADE",
+        "onUpdate": "CASCADE"
+      },
+      "otherEntityName": "asciidocSlide",
+      "otherEntityRelationshipName": "qrcodes",
+      "relationshipName": "asciidocSlide",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

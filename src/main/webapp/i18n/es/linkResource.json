@@ -1,0 +1,27 @@
+{
+  "edsterApp": {
+    "linkResource": {
+      "home": {
+        "title": "Link Resources",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Link Resource",
+        "createOrEditLabel": "Crear o editar Link Resource",
+        "notFound": "Ningún Link Resources encontrado"
+      },
+      "created": "Un nuevo Link Resource ha sido creado con el identificador {{ param }}",
+      "updated": "Un Link Resource ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Link Resource ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Link Resource {{ id }}?"
+      },
+      "detail": {
+        "title": "Link Resource"
+      },
+      "id": "ID",
+      "type": "Type",
+      "uri": "Uri",
+      "target": "Target",
+      "asciidocSlide": "Asciidoc Slide"
+    }
+  }
+}

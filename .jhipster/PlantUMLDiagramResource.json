@@ -1,0 +1,40 @@
+{
+  "annotations": {
+    "changelogDate": "20250312073653"
+  },
+  "applications": ["edster"],
+  "dto": "mapstruct",
+  "entityTableName": "plant_uml_diagram_resource",
+  "fields": [
+    {
+      "fieldName": "type",
+      "fieldType": "DocumentResourceType",
+      "fieldValues": "IMAGE,LINK,PLANTUML,QRCODE"
+    },
+    {
+      "fieldName": "uri",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "umlCode",
+      "fieldType": "String"
+    }
+  ],
+  "name": "PlantUMLDiagramResource",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "options": {
+        "onDelete": "CASCADE",
+        "onUpdate": "CASCADE"
+      },
+      "otherEntityName": "asciidocSlide",
+      "otherEntityRelationshipName": "diagrams",
+      "relationshipName": "asciidocSlide",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

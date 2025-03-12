@@ -1,0 +1,32 @@
+{
+  "edsterApp": {
+    "asciidocSlide": {
+      "home": {
+        "title": "AsciidocSlides",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Asciidoc Slide",
+        "createOrEditLabel": "Créer ou éditer un Asciidoc Slide",
+        "notFound": "Aucun Asciidoc Slide trouvé"
+      },
+      "created": "Un nouveau Asciidoc Slide a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Asciidoc Slide avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Asciidoc Slide avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Asciidoc Slide {{ id }} ?"
+      },
+      "detail": {
+        "title": "Asciidoc Slide"
+      },
+      "id": "ID",
+      "title": "Title",
+      "content": "Content",
+      "notes": "Notes",
+      "num": "Num",
+      "presentation": "Presentation",
+      "images": "Images",
+      "links": "Links",
+      "diagrams": "Diagrams",
+      "qrcodes": "Qrcodes"
+    }
+  }
+}

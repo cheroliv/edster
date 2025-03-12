@@ -1,0 +1,46 @@
+{
+  "annotations": {
+    "changelogDate": "20250312073253"
+  },
+  "applications": ["edster"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "plan",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "uri",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "promptUserMessage",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Presentation",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "options": {
+        "onDelete": "CASCADE",
+        "onUpdate": "CASCADE"
+      },
+      "otherEntityName": "workspace",
+      "otherEntityRelationshipName": "presentations",
+      "relationshipName": "workspace",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "asciidocSlide",
+      "relationshipName": "slides",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

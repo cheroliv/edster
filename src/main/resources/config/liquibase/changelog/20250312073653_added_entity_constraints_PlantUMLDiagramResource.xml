@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <!--
+        Added the constraints for entity PlantUMLDiagramResource.
+    -->
+    <changeSet id="20250312073653-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="asciidoc_slide_id"
+                                 baseTableName="plant_uml_diagram_resource"
+                                 constraintName="fk_plant_uml_diagram_resource__asciidoc_slide_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="asciidoc_slide"
+                                 onDelete="CASCADE"
+                                 onUpdate="CASCADE"
+                                 />
+    </changeSet>
+</databaseChangeLog>

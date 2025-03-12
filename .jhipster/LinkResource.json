@@ -1,0 +1,39 @@
+{
+  "annotations": {
+    "changelogDate": "20250312073553"
+  },
+  "applications": ["edster"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "type",
+      "fieldType": "DocumentResourceType",
+      "fieldValues": "IMAGE,LINK,PLANTUML,QRCODE"
+    },
+    {
+      "fieldName": "uri",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "target",
+      "fieldType": "String"
+    }
+  ],
+  "name": "LinkResource",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "options": {
+        "onDelete": "CASCADE",
+        "onUpdate": "CASCADE"
+      },
+      "otherEntityName": "asciidocSlide",
+      "otherEntityRelationshipName": "links",
+      "relationshipName": "asciidocSlide",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <!--
+        Added the constraints for entity QRCodeResource.
+    -->
+    <changeSet id="20250312073753-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="asciidoc_slide_id"
+                                 baseTableName="qr_code_resource"
+                                 constraintName="fk_qr_code_resource__asciidoc_slide_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="asciidoc_slide"
+                                 onDelete="CASCADE"
+                                 onUpdate="CASCADE"
+                                 />
+    </changeSet>
+</databaseChangeLog>
