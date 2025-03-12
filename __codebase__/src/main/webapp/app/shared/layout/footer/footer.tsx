@@ -10,18 +10,18 @@ const Footer = () => {
             <div className="d-flex justify-content-between align-items-center flex-wrap pt-1">
               <a
                 href="https://cheroliv.github.io/blog.html"
-                className="footer-link d-flex align-items-center mb-2 mb-lg-0 text-white"
+                className="footer-link mb-2 mb-lg-0 text-white"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: 'white' }}
               >
-                <i className="bi bi-file-earmark-fill me-2 footer-icon text-white"></i>
+                <i className="bi bi-file-text-fill me-2 footer-icon text-white"></i>
                 <span className="text-white">Blog</span>
               </a>
 
               <a
                 href="https://cheroliv.github.io/about.html"
-                className="footer-link d-flex align-items-center mb-2 mb-lg-0 text-white"
+                className="footer-link mb-2 mb-lg-0 text-white"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: 'white' }}
@@ -32,7 +32,7 @@ const Footer = () => {
 
               <a
                 href="https://github.com/cccp-education/"
-                className="footer-link d-flex align-items-center mb-2 mb-lg-0 text-white"
+                className="footer-link mb-2 mb-lg-0 text-white"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: 'white' }}
@@ -43,7 +43,7 @@ const Footer = () => {
 
               <a
                 href="https://youtube.com/@cccp.education/"
-                className="footer-link d-flex align-items-center mb-2 mb-lg-0 text-white"
+                className="footer-link mb-2 mb-lg-0 text-white"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: 'white' }}
@@ -52,18 +52,14 @@ const Footer = () => {
                 <span className="text-white">YouTube</span>
               </a>
 
-              <a
-                href="mailto:contact@cccp.education"
-                className="footer-link d-flex align-items-center mb-2 mb-lg-0 text-white"
-                style={{ color: 'white' }}
-              >
+              <a href="mailto:contact@cccp.education" className="footer-link mb-2 mb-lg-0 text-white" style={{ color: 'white' }}>
                 <i className="bi bi-envelope-fill me-2 footer-icon text-white"></i>
                 <span className="text-white">Contact</span>
               </a>
 
               <a
                 href="https://cheroliv.github.io/about.html"
-                className="footer-link d-flex align-items-center mb-2 mb-lg-0 text-white"
+                className="footer-link mb-2 mb-lg-0 text-white"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: 'white' }}

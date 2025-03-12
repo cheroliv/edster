@@ -58,3 +58,15 @@
     text-align: center;
   }
 }
+
+.footer-link {
+  display: flex;
+  flex-direction: column; // Met l'icône au-dessus du texte
+  align-items: center;
+  text-decoration: none;
+
+  .footer-icon {
+    font-size: 1.5rem; // Ajuste la taille des icônes
+    margin-bottom: 0.25rem; // Espacement entre l'icône et le texte
+  }
+}

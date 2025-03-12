@@ -1,5 +1,7 @@
 #!/bin/bash
 
+nvm use lts/jod;
+
 # Define the expected directory name
 EXPECTED_DIR_NAME="edster"
 
