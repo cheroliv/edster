@@ -1,10 +1,14 @@
 = Application Edster
 
-Edster est une application basée sur JHipster, conçue pour créer et générer des présentations. Elle exploite la plateforme JHipster pour développer et déployer rapidement des applications modernes de génération de présentations.
+Edster est une application basée sur JHipster, conçue pour créer et générer des présentations.
+Elle exploite la plateforme JHipster pour développer et déployer rapidement des applications modernes de génération de présentations.
 
-== Génération du code source
+== Configuration de Edster
 
-Le code source d'Edster peut être généré à l'aide du script `jdl.sh`. Ce script traite un fichier JDL (JHipster Domain Language) pour définir les entités, les relations et les configurations de l'application.
+=== Génération du code source
+
+Le code source d'Edster peut être généré à l'aide du script `jdl.sh`.
+Ce script traite un fichier JDL (JHipster Domain Language) pour définir les entités, les relations et les configurations de l'application.
 
 *Note : Avant d'exécuter le script `jdl.sh` pour la première fois, vous devez le rendre exécutable à l'aide de la commande suivante :*
 
@@ -24,12 +28,12 @@ Pour générer le code source :
 
 Cette commande va :
 
-*   Analyser le fichier JDL.
-*   Générer le code d'application nécessaire en fonction de la définition JDL.
+* Analyser le fichier JDL.
+* Générer le code d'application nécessaire en fonction de la définition JDL.
 
 Assurez-vous que le script `jdl.sh` est exécutable et que vous avez l'environnement JHipster nécessaire configuré.
 
-== Nettoyage du code généré
+=== Nettoyage du code généré
 
 Si vous devez nettoyer le code généré, vous pouvez utiliser le script `clean.sh`.
 
@@ -50,8 +54,7 @@ Pour nettoyer le code généré :
 ----
 
 Cette commande supprimera le code généré, vous permettant de le régénérer à l'aide du script `jdl.sh`.
-
-== Mode Développement
+== Execution de Edster === Mode Développement
 
 Pour exécuter l'application en mode développement, suivez les étapes suivantes :
 
@@ -62,7 +65,8 @@ Pour exécuter l'application en mode développement, suivez les étapes suivante
 npm run app:start;
 ----
 
-Cette commande démarrera le serveur backend avec le rechargement à chaud activé. Le frontend est servi par le serveur de développement webpack.
+Cette commande démarrera le serveur backend avec le rechargement à chaud activé.
+Le frontend est servi par le serveur de développement webpack.
 
 . Accédez à l'application dans votre navigateur :
 +
@@ -74,7 +78,7 @@ http://localhost:8080/
 * Serveur de développement Webpack pour le frontend
 * Base de données H2 (si elle n'est pas configurée différemment)
 
-== Mode Production
+=== Mode Production
 
 Pour exécuter l'application en mode production, suivez les étapes suivantes :
 
@@ -87,10 +91,10 @@ Pour exécuter l'application en mode production, suivez les étapes suivantes :
 
 Cette commande va :
 
-*   Compiler le code Java
-*   Exécuter les tests
-*   Empaqueter l'application dans une archive déployable (`.war` ou `.jar` ou `.gradle`)
-*   Optimiser les ressources du frontend
+* Compiler le code Java
+* Exécuter les tests
+* Empaqueter l'application dans une archive déployable (`.war` ou `.jar` ou `.gradle`)
+* Optimiser les ressources du frontend
 
 . Exécutez l'application :
 +
@@ -128,8 +132,8 @@ Cette commande démarrera le serveur backend à :
 +
 http://localhost:8080/
 
-
 . Pour exécuter le frontend en mode live-reload :
+
 [source,bash]
 ----
 npm run start;
@@ -139,9 +143,10 @@ Cette commande démarrera le serveur de développement frontend avec le recharge
 +
 http://localhost:9001/
 
-== Synchronisation du code source
+=== Synchronisation du code source
 
-Le script `sync.sh` permet de synchroniser les modifications manuelles du code avec le code source généré par JDL. Cela garantit que les personnalisations sont conservées lors de la régénération de l'application à l'aide de `jdl.sh`.
+Le script `sync.sh` permet de synchroniser les modifications manuelles du code avec le code source généré par JDL.
+Cela garantit que les personnalisations sont conservées lors de la régénération de l'application à l'aide de `jdl.sh`.
 
 *Note : Avant d'exécuter le script `sync.sh` pour la première fois, vous devez le rendre exécutable à l'aide de la commande suivante :*
 
@@ -181,7 +186,8 @@ Pour exécuter séparément l'application front-end et back-end en mode dévelop
 ./npmw run backend:start &;npm run start;
 ----
 
-Un seul Ctrl+C arrêtera uniquement le front-end. Pour arrêter le back-end, vous devrez trouver l'identifiant du processus et le tuer, comme ceci :
+Un seul Ctrl+C arrêtera uniquement le front-end.
+Pour arrêter le back-end, vous devrez trouver l'identifiant du processus et le tuer, comme ceci :
 
 [source,bash]
 ----
@@ -194,3 +200,13 @@ Pour relancer le front-end :
 ----
 npm run start;
 ----
+
+== Pousser Edster sur dockerhub
+
+===  Générer une clef api dockerhub
+
+* *Créer un compte dockerhub*
+* *Générer une clef sur portainer ou dockerhub.com*
+
+==== Configurer docker-credential-helpers
+

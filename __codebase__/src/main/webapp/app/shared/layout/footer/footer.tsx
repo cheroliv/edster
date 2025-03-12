@@ -14,7 +14,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 style={{ color: 'white' }}
               >
-                <i className="bi bi-file-text-fill me-2 footer-icon text-white"></i>
+                <i className="bi bi-file-text me-2 footer-icon text-white"></i>
                 <span className="text-white">Blog</span>
               </a>
 
@@ -25,7 +25,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 style={{ color: 'white' }}
               >
-                <i className="bi bi-book-fill me-2 footer-icon text-white"></i>
+                <i className="bi bi-book me-2 footer-icon text-white"></i>
                 <span className="text-white">Documentation</span>
               </a>
 
@@ -52,7 +52,7 @@ const Footer = () => {
               </a>
 
               <a href="mailto:contact@cccp.education" className="footer-link mb-2 mb-lg-0 text-white" style={{ color: 'white' }}>
-                <i className="bi bi-envelope-fill me-2 footer-icon text-white"></i>
+                <i className="bi bi-envelope me-2 footer-icon text-white"></i>
                 <span className="text-white">Contact</span>
               </a>
 
