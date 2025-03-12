@@ -119,7 +119,7 @@ Pendant le développement, vous pouvez exécuter le backend et le frontend sépa
 +
 [source,bash]
 ----
-pnpm run backend:start
+./npmw run backend:start;
 ----
 
 Cette commande démarrera le serveur backend à :
@@ -130,7 +130,7 @@ http://localhost:8080/
 . Pour exécuter le frontend en mode live-reload :
 [source,bash]
 ----
-pnpm run start
+nvm use lts/jod; pnpm run start;
 ----
 
 Cette commande démarrera le serveur de développement frontend avec le rechargement à chaud, vous permettant de voir les modifications en temps réel à :
@@ -159,11 +159,11 @@ Pour synchroniser le code source :
 
 Ce script identifiera et fusionnera vos modifications manuelles dans le code nouvellement généré, minimisant les conflits et préservant vos personnalisations.
 
-=== Ajouter une entrée au fichier .gitignore
+=== Ajouter une entrée au fichier `.gitignore`
 
-==== Ajouter le dossier .goose au fichier .gitignore
+==== Ajouter le dossier `.goose` au fichier `.gitignore`
 
-Afin d'ajouter le dossier .goose au fichier .gitignore, vous devez ajouter ce code à la fin du fichier jdl.sh.
+Afin d'ajouter le dossier `.goose` au fichier `.gitignore`, vous devez ajouter ce code à la fin du fichier `jdl.sh`.
 
 [source,bash]
 ----
