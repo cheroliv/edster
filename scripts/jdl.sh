@@ -26,3 +26,9 @@ jhipster jdl edster.jdl --force;
 #jhipster ci-cd;
 
 echo ".goose" >> .gitignore;
+echo "README.pdf" >> .gitignore;
+echo "README.html" >> .gitignore;
+echo "README.docx" >> .gitignore;
+echo "README.fr.pdf" >> .gitignore;
+echo "README.fr.html" >> .gitignore;
+echo "README.fr.docx" >> .gitignore;
