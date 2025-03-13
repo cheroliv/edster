@@ -210,3 +210,106 @@ npm run start;
 
 ==== Configurer docker-credential-helpers
 
+=== Déploiement d'images Docker sur Docker Hub de manière programmatique
+
+Ce document décrit les étapes pour déployer une image Docker sur Docker Hub de manière programmatique. Nous utiliserons l'outil `docker-credential-helpers`, et plus précisément l'assistant d'identification `pass`, pour le stockage sécurisé des identifiants Docker Hub.
+
+==== Prérequis
+
+==== Installation des prérequis sur Ubuntu
+
+Cette section fournit des informations spécifiques à l'utilisation de `pass` comme magasin d'identifiants.
+
+Pour utiliser l'assistant d'identification `pass`, assurez-vous que `pass` est installé et correctement initialisé :
+
+*   Installer pass :
+`sudo apt-get install pass`
+*   Initialiser pass avec votre ID de clé GPG :
+`pass init <your_gpg_key_id>`
+
+Remplacez `<your_gpg_key_id>` par votre ID de clé GPG réel.
+
+*   Docker installé et en cours d'exécution.
+*   `docker-credential-helpers` installé. Sur Debian/Ubuntu :
+`sudo apt-get install docker-credential-helper-pass`
+*   Gestionnaire de mots de passe `pass` installé et initialisé. Sur Debian/Ubuntu :
+`sudo apt-get install pass`
+`pass init <your_gpg_id>` (remplacez `<your_gpg_id>` par votre ID de clé GPG)
+*   Compte Docker Hub et dépôt créés.
+
+==== Configuration
+
+===== 1. Configurer `docker-credential-helpers`
+
+Ajoutez `pass` à votre fichier `~/.docker/config.json`. Si la section `credHelpers` n'existe pas, créez-la.
+
+.Exemple `~/.docker/config.json`
+[source,json]
+----
+{
+  "credsStore": "desktop",
+  "credHelpers": {
+    "docker.io": "pass"
+  }
+}
+----
+
+===== 2. Stocker les identifiants Docker Hub dans `pass`
+
+Utilisez la commande `pass` pour stocker votre nom d'utilisateur Docker Hub et votre jeton d'accès personnel (PAT). **Important :** Utilisez un jeton d'accès personnel au lieu de votre mot de passe pour les déploiements automatisés. Générez un PAT sur Docker Hub avec un accès "écriture" à votre dépôt.
+
+`pass insert docker-credential-helpers/docker.io`
+
+Lorsque vous y êtes invité, entrez votre nom d'utilisateur Docker Hub et votre jeton d'accès personnel dans le format suivant :
+
+`username=<your_dockerhub_username>`
+`password=<your_personal_access_token>`
+
+===== 3. Se connecter à Docker Hub
+
+Connectez-vous à Docker Hub à l'aide de la commande `docker login`. `docker-credential-pass` récupérera automatiquement les identifiants de `pass`.
+
+`docker login`
+
+Vous devriez voir "Login Succeeded" si les identifiants ont été récupérés avec succès.
+
+==== Exemple de script de déploiement
+
+Voici un exemple de script shell pour construire, baliser et pousser une image Docker sur Docker Hub :
+
+.Exemple `deploy.sh`
+[source,bash]
+----
+#!/bin/bash
+
+# Définir les variables
+IMAGE_NAME="your-image-name"
+IMAGE_TAG="latest"
+DOCKERHUB_USERNAME="your-dockerhub-username"
+DOCKERHUB_REPO="your-dockerhub-repo"
+
+# Construire l'image Docker
+docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .
+
+# Baliser l'image pour Docker Hub
+docker tag ${IMAGE_NAME}:${IMAGE_TAG} ${DOCKERHUB_USERNAME}/${DOCKERHUB_REPO}:${IMAGE_TAG}
+
+# Pousser l'image sur Docker Hub
+docker push ${DOCKERHUB_USERNAME}/${DOCKERHUB_REPO}:${IMAGE_TAG}
+----
+
+**Important :**
+
+*   Remplacez `your-image-name`, `latest`, `your-dockerhub-username` et `your-dockerhub-repo` par vos valeurs réelles.
+*   Rendez le script exécutable : `chmod +x deploy.sh`
+
+==== Notes sur l'automatisation
+
+*   Pour les pipelines CI/CD, assurez-vous que `pass` est disponible et initialisé dans l'environnement.
+*   Envisagez d'utiliser des variables d'environnement pour transmettre des informations sensibles au script, plutôt que de les coder en dur.
+*   Utilisez toujours des jetons d'accès personnels (PAT) au lieu des mots de passe pour la sécurité.
+*   Stockez le PAT en toute sécurité (par exemple, dans un gestionnaire de secrets CI/CD).
+
+==== Vérification
+
+Une fois que le script s'est exécuté avec succès, vérifiez que l'image est bien poussée sur votre dépôt Docker Hub.
