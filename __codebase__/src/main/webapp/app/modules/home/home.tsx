@@ -6,6 +6,7 @@ import { Translate } from 'react-jhipster';
 import { Alert, Col, Row } from 'reactstrap';
 
 import { useAppSelector } from 'app/config/store';
+import { WorkspaceLanding } from './workspaceLanding';
 
 export const Home = () => {
   const account = useAppSelector(state => state.authentication.account);
@@ -29,6 +30,9 @@ export const Home = () => {
                 You are logged in as user {account.login}.
               </Translate>
             </Alert>
+
+            {/* Ajout du composant WorkspaceLanding */}
+            <WorkspaceLanding />
           </div>
         ) : (
           <div>
