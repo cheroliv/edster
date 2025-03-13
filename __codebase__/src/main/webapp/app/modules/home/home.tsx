@@ -17,18 +17,19 @@ export const Home = () => {
         <span className="hipster rounded" />
       </Col>
       <Col md="9">
-        <h1 className="display-12">
-          <Translate contentKey="home.title">Welcome, Java Hipster!</Translate>
-        </h1>
-        <p className="lead">
-          <Translate contentKey="home.subtitle">This is your homepage</Translate>
-        </p>
         {account?.login ? (
           <div>
             <WorkspaceLanding />
           </div>
         ) : (
           <div>
+            <h1 className="display-12">
+              <Translate contentKey="home.title">Welcome, Java Hipster!</Translate>
+            </h1>
+            <p className="lead">
+              <Translate contentKey="home.subtitle">This is your homepage</Translate>
+            </p>
+
             <Alert color="warning">
               <Translate contentKey="global.messages.info.authenticated.prefix">If you want to </Translate>
 
