@@ -66,16 +66,11 @@ export const WorkspaceLanding = () => {
 
   return (
     <div className="workspace-landing">
-      <Row className="search-bar">
+      {/* Top controls row with selector and new button */}
+      <Row className="controls-bar">
         <Col xs={12}>
-          <Form className="search-form d-flex align-items-stretch">
-            <div className="d-flex search-container">
-              <Button color="secondary" className="search-button d-flex justify-content-center align-items-center">
-                <i className="bi bi-search search-icon"></i>
-              </Button>
-              <Input type="text" placeholder="Enter text here" value={searchText} onChange={handleSearchChange} className="search-input" />
-            </div>
-            <FormGroup className="content-type-select mb-0 mx-2 d-flex align-items-center">
+          <div className="d-flex justify-content-between align-items-center">
+            <FormGroup className="content-type-select mb-0 d-flex align-items-center">
               <Input type="select" name="contentType" id="contentType" className="h-100 d-flex align-items-center">
                 <option>pick one...</option>
                 <option>Slide</option>
@@ -88,6 +83,20 @@ export const WorkspaceLanding = () => {
             <Button color="primary" className="new-button">
               New
             </Button>
+          </div>
+        </Col>
+      </Row>
+
+      {/* Search row below */}
+      <Row className="search-bar mt-3">
+        <Col xs={12}>
+          <Form className="search-form d-flex align-items-stretch">
+            <div className="d-flex search-container w-100">
+              <Button color="secondary" className="search-button d-flex justify-content-center align-items-center">
+                <i className="bi bi-search search-icon"></i>
+              </Button>
+              <Input type="text" placeholder="Enter text here" value={searchText} onChange={handleSearchChange} className="search-input" />
+            </div>
           </Form>
         </Col>
       </Row>
