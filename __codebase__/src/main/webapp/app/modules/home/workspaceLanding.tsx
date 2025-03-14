@@ -51,7 +51,7 @@ export const WorkspaceLanding = () => {
   const typeColors = {
     slide: 'blue',
     site: 'red',
-    article: 'darkSlateGrey',
+    article: 'darkorange',
     training: 'purple',
     school: 'green',
   };
