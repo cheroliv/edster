@@ -6,13 +6,13 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
                         http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
     <!--
-        Added the constraints for entity QRCodeResource.
+        Added the constraints for entity LinkResource.
     -->
-    <changeSet id="20250312073753-2" author="jhipster">
+    <changeSet id="20250314015728-2" author="jhipster">
 
         <addForeignKeyConstraint baseColumnNames="asciidoc_slide_id"
-                                 baseTableName="qr_code_resource"
-                                 constraintName="fk_qr_code_resource__asciidoc_slide_id"
+                                 baseTableName="link_resource"
+                                 constraintName="fk_link_resource__asciidoc_slide_id"
                                  referencedColumnNames="id"
                                  referencedTableName="asciidoc_slide"
                                  onDelete="CASCADE"

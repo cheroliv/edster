@@ -1,0 +1,99 @@
+/* Workspace Landing Styles */
+.workspace-landing {
+  padding: 20px;
+  border-radius: 8px;
+
+  .search-bar {
+    margin-bottom: 15px;
+
+    .search-button {
+      border-radius: 4px 0 0 4px;
+      width: 40px;
+
+      .search-icon {
+        &:before {
+          content: '\f002';
+          font-family: 'Font Awesome 5 Free';
+          font-weight: 900;
+        }
+      }
+    }
+
+    .search-input {
+      border-radius: 0;
+      border-left: none;
+    }
+
+    .content-type-select {
+      min-width: 150px;
+    }
+
+    .new-button {
+      margin-left: 10px;
+      border-radius: 4px;
+    }
+  }
+
+  .filter-bar {
+    padding: 10px 0;
+    border-bottom: 1px solid #dee2e6;
+
+    .filter-checkbox {
+      margin-right: 15px;
+      display: inline-flex;
+      align-items: center;
+
+      input[type='checkbox'] {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .content-grid {
+    min-height: 300px;
+
+    .content-item {
+      height: 50px;
+      text-align: left;
+      padding: 10px 15px;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  .pagination-bar {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #dee2e6;
+
+    .chevron-left:before {
+      content: '\f053';
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+    }
+
+    .caret-left:before {
+      content: '\f0d9';
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+    }
+
+    .chevron-right:before {
+      content: '\f054';
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+    }
+
+    .caret-right:before {
+      content: '\f0da';
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+    }
+  }
+}

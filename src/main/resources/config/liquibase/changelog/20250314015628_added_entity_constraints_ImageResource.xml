@@ -6,13 +6,13 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
                         http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
     <!--
-        Added the constraints for entity PlantUMLDiagramResource.
+        Added the constraints for entity ImageResource.
     -->
-    <changeSet id="20250312073653-2" author="jhipster">
+    <changeSet id="20250314015628-2" author="jhipster">
 
         <addForeignKeyConstraint baseColumnNames="asciidoc_slide_id"
-                                 baseTableName="plant_uml_diagram_resource"
-                                 constraintName="fk_plant_uml_diagram_resource__asciidoc_slide_id"
+                                 baseTableName="image_resource"
+                                 constraintName="fk_image_resource__asciidoc_slide_id"
                                  referencedColumnNames="id"
                                  referencedTableName="asciidoc_slide"
                                  onDelete="CASCADE"

@@ -22,9 +22,9 @@
       "QRCodeResource"
     ],
     "jhipsterVersion": "8.9.0",
-    "jwtSecretKey": "MzUwMDA5YjAxZTIxMGJhNzdkNDU1MWM2YzE2NjgxZmM2MjczOGU4NmIyYTI5NWY0NTk4NDY2NTY3NmMxOWE3MDdmYWI5MjE0NzU0ZWMyNTg2MzcwNzk2ZmIzNWYzMmNiOGVhNWU0MmU3MmI5MmNjNTQ4ZjVjZjI2ZWIwNmI5M2E=",
+    "jwtSecretKey": "ZGFhMjUwOTMxODk0NTcxMjhiYzkxYTk4YTUxMDIxNGEzYmU0ZGM3YTYyYTg2OGExOWM0YmU2MjVlMjExNDI1YTk1ZmQ0NjYwOTY1ZjMzZWJmMjE1YTNmMWExODJhNzEwY2QyYTlhYjhiYTU4OGE0YTZmMTcxNDhjOWIxYjM0OWI=",
     "languages": ["fr", "en", "es"],
-    "lastLiquibaseTimestamp": 1741765073000,
+    "lastLiquibaseTimestamp": 1741917568000,
     "nativeLanguage": "fr",
     "packageName": "edtech",
     "prodDatabaseType": "postgresql",

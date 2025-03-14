@@ -6,15 +6,15 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
                         http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
     <!--
-        Added the constraints for entity AsciidocSlide.
+        Added the constraints for entity Presentation.
     -->
-    <changeSet id="20250312073353-2" author="jhipster">
+    <changeSet id="20250314015428-2" author="jhipster">
 
-        <addForeignKeyConstraint baseColumnNames="presentation_id"
-                                 baseTableName="asciidoc_slide"
-                                 constraintName="fk_asciidoc_slide__presentation_id"
+        <addForeignKeyConstraint baseColumnNames="workspace_id"
+                                 baseTableName="presentation"
+                                 constraintName="fk_presentation__workspace_id"
                                  referencedColumnNames="id"
-                                 referencedTableName="presentation"
+                                 referencedTableName="workspace"
                                  onDelete="CASCADE"
                                  onUpdate="CASCADE"
                                  />
