@@ -138,28 +138,27 @@ export const WorkspaceLanding = () => {
       </Row>
 
       <Row className="pagination-bar mt-3">
-        <Col xs={12}>
-          <div className="d-flex justify-content-between align-items-center">
-            <div>
-              <span>1 - 10 of 10 presentations</span>
-            </div>
-            <div className="d-flex align-items-center">
-              <Button color="link" className="px-1">
-                <i className="bi bi-chevron-left"></i>
-              </Button>
-              <Button color="link" className="px-1">
-                <i className="bi bi-caret-left-fill"></i>
-              </Button>
-              <Button color="primary" size="sm" className="mx-1">
-                1
-              </Button>
-              <Button color="link" className="px-1">
-                <i className="bi bi-chevron-right"></i>
-              </Button>
-              <Button color="link" className="px-1">
-                <i className="bi bi-caret-right-fill"></i>
-              </Button>
-            </div>
+        {/* Texte aligné à gauche */}
+        <Col xs={12} md={6} className="pagination-info">
+          <span>1 - 10 of 10 presentations</span>
+        </Col>
+
+        {/* Pagination centrée */}
+        <Col xs={12} md={6} className="d-flex justify-content-center">
+          <div className="pagination-controls">
+            <Button color="link">
+              <i className="bi bi-chevron-double-left"></i>
+            </Button>
+            <Button color="link">
+              <i className="bi bi-chevron-left"></i>
+            </Button>
+            <span className="pagination-number">1</span>
+            <Button color="link">
+              <i className="bi bi-chevron-right"></i>
+            </Button>
+            <Button color="link">
+              <i className="bi bi-chevron-double-right"></i>
+            </Button>
           </div>
         </Col>
       </Row>

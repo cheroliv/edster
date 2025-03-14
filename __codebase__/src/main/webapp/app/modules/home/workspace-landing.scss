@@ -117,3 +117,252 @@
   line-height: 1;
   vertical-align: middle;
 }
+
+.pagination-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .pagination-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .pagination-number {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 5px 10px;
+      background: #007bff;
+      color: white;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background: none;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.pagination-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .pagination-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+
+    @media (max-width: 576px) {
+      // Sur écran petit (moins de 576px)
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  .pagination-info {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .pagination-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 5px;
+
+    .pagination-number {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 5px 10px;
+      background: #007bff;
+      color: white;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background: none;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.pagination-bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+
+  .pagination-info {
+    text-align: left; // Alignement du texte à gauche
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .pagination-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    .pagination-number {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 5px 10px;
+      background: #007bff;
+      color: white;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background: none;
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    // Mode mobile
+    flex-direction: column;
+
+    .pagination-info {
+      width: 100%;
+      text-align: left;
+      margin-bottom: 5px;
+    }
+
+    .pagination-controls {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}
+.pagination-bar {
+  position: relative; // Nécessaire pour le positionnement absolu de la pagination
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  .pagination-info {
+    text-align: left;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 100%;
+  }
+
+  .pagination-container {
+    position: absolute; // Fixe la pagination
+    left: 50%;
+    transform: translateX(-50%); // Centre l'élément par rapport à la largeur totale
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .pagination-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    .pagination-number {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 5px 10px;
+      background: #007bff;
+      color: white;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background: none;
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    display: block;
+
+    .pagination-info {
+      text-align: left;
+      margin-bottom: 5px;
+    }
+
+    .pagination-container {
+      position: static; // Désactive le `absolute` sur mobile
+      transform: none;
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+  }
+}
+.pagination-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  .pagination-info {
+    text-align: left;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .pagination-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center; // Centre bien la pagination
+    gap: 10px;
+    width: 100%;
+  }
+
+  .pagination-number {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  @media (max-width: 576px) {
+    flex-direction: column; // Fait passer la pagination en dessous
+    .pagination-info {
+      text-align: left;
+      width: 100%;
+      margin-bottom: 5px;
+    }
+    .pagination-controls {
+      justify-content: center;
+      width: 100%;
+    }
+  }
+}
