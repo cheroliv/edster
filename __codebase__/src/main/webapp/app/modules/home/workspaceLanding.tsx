@@ -68,13 +68,15 @@ export const WorkspaceLanding = () => {
     <div className="workspace-landing">
       <Row className="search-bar">
         <Col xs={12}>
-          <Form className="d-flex align-items-center">
-            <Button color="secondary" className="search-button">
-              <span className="search-icon"></span>
-            </Button>
-            <Input type="text" placeholder="Enter text here" value={searchText} onChange={handleSearchChange} className="search-input" />
-            <FormGroup className="content-type-select mb-0 mx-2">
-              <Input type="select" name="contentType" id="contentType">
+          <Form className="search-form d-flex align-items-stretch">
+            <div className="d-flex search-container">
+              <Button color="secondary" className="search-button d-flex justify-content-center align-items-center">
+                <i className="bi bi-search search-icon"></i>
+              </Button>
+              <Input type="text" placeholder="Enter text here" value={searchText} onChange={handleSearchChange} className="search-input" />
+            </div>
+            <FormGroup className="content-type-select mb-0 mx-2 d-flex align-items-center">
+              <Input type="select" name="contentType" id="contentType" className="h-100 d-flex align-items-center">
                 <option>pick one...</option>
                 <option>Slide</option>
                 <option>Site</option>
@@ -134,19 +136,19 @@ export const WorkspaceLanding = () => {
             </div>
             <div className="d-flex align-items-center">
               <Button color="link" className="px-1">
-                <span className="chevron-left"></span>
+                <i className="bi bi-chevron-left"></i>
               </Button>
               <Button color="link" className="px-1">
-                <span className="caret-left"></span>
+                <i className="bi bi-caret-left-fill"></i>
               </Button>
               <Button color="primary" size="sm" className="mx-1">
                 1
               </Button>
               <Button color="link" className="px-1">
-                <span className="chevron-right"></span>
+                <i className="bi bi-chevron-right"></i>
               </Button>
               <Button color="link" className="px-1">
-                <span className="caret-right"></span>
+                <i className="bi bi-caret-right-fill"></i>
               </Button>
             </div>
           </div>

@@ -6,31 +6,61 @@
   .search-bar {
     margin-bottom: 15px;
 
+    .search-form {
+      height: 38px; /* Hauteur standard des éléments de formulaire Bootstrap */
+    }
+
+    .search-container {
+      flex: 1;
+      height: 100%;
+    }
+
     .search-button {
       border-radius: 4px 0 0 4px;
-      width: 40px;
+      width: 45px; /* Légèrement plus large pour la loupe agrandie */
+      padding: 0;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       .search-icon {
-        &:before {
-          content: '\f002';
-          font-family: 'Font Awesome 5 Free';
-          font-weight: 900;
-        }
+        font-size: 1.4rem; /* Loupe agrandie */
+        color: #fff;
       }
     }
 
     .search-input {
       border-radius: 0;
       border-left: none;
+      height: 100%;
     }
 
     .content-type-select {
       min-width: 150px;
+      height: 100%;
+      margin: 0 10px !important;
+
+      select {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        /* Correction pour centrer le texte verticalement */
+        option {
+          padding: 5px;
+        }
+      }
     }
 
     .new-button {
-      margin-left: 10px;
       border-radius: 4px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 15px;
     }
   }
 
@@ -72,28 +102,15 @@
     padding-top: 15px;
     border-top: 1px solid #dee2e6;
 
-    .chevron-left:before {
-      content: '\f053';
-      font-family: 'Font Awesome 5 Free';
-      font-weight: 900;
-    }
-
-    .caret-left:before {
-      content: '\f0d9';
-      font-family: 'Font Awesome 5 Free';
-      font-weight: 900;
-    }
-
-    .chevron-right:before {
-      content: '\f054';
-      font-family: 'Font Awesome 5 Free';
-      font-weight: 900;
-    }
-
-    .caret-right:before {
-      content: '\f0da';
-      font-family: 'Font Awesome 5 Free';
-      font-weight: 900;
+    .bi {
+      font-size: 0.9rem;
     }
   }
+}
+
+/* Styles généraux pour toutes les icônes Bootstrap */
+.bi {
+  display: inline-block;
+  line-height: 1;
+  vertical-align: middle;
 }
