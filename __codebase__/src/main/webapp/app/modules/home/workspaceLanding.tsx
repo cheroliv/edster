@@ -40,7 +40,7 @@ export const WorkspaceLanding = () => {
     setSelectedContentType(type);
     setDropdownOpen(false);
     // Ici, vous pouvez ajouter la logique pour créer un nouveau contenu en fonction du type sélectionné
-    // console.log(`Creating new ${type}`);
+    console.warn(`Creating new ${type}`);
   };
 
   const handleTypeChange = type => {

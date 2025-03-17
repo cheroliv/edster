@@ -12,7 +12,7 @@ application {
     databaseType sql
     devDatabaseType postgresql
     prodDatabaseType postgresql
-    testFrameworks [cucumber, cypress, gatling]
+    testFrameworks [cypress]
     clientTheme darkly
     clientThemeVariant primary
     nativeLanguage fr
