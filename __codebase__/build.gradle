@@ -89,16 +89,12 @@ eclipse {
 
 defaultTasks "bootRun"
 
-springBoot {
-  mainClass = "edtech.EdsterApp"
-}
+springBoot { mainClass = "edtech.EdsterApp" }
 
 test {
   useJUnitPlatform()
   exclude "**/*IT*", "**/*IntTest*"
-  testLogging {
-    events 'FAILED', 'SKIPPED'
-  }
+  testLogging { events 'FAILED', 'SKIPPED' }
   jvmArgs += '-Djava.security.egd=file:/dev/./urandom -Xmx512m'
   // uncomment if the tests reports are not generated
   // see https://github.com/jhipster/generator-jhipster/pull/2771 and https://github.com/jhipster/generator-jhipster/pull/4484
@@ -107,9 +103,7 @@ test {
   testLogging.exceptionFormat "full"
 
   if (JavaVersion.current().isCompatibleWith(JavaVersion.VERSION_13)) {
-    jvmArgs += [
-            "-XX:+AllowRedefinitionToAddDeleteMethods"
-    ]
+    jvmArgs += ["-XX:+AllowRedefinitionToAddDeleteMethods"]
   }
 }
 
