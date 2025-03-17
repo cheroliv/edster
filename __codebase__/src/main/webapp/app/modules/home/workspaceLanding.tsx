@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Translate } from 'react-jhipster';
-import { Alert, Col, Row, Input, Button, Badge, Form, FormGroup, Label } from 'reactstrap';
+import { Col, Row, Input, Button, Form, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import './workspace-landing.scss';
 
 export const WorkspaceLanding = () => {
@@ -14,6 +13,8 @@ export const WorkspaceLanding = () => {
     school: false,
   });
   const [currentPage, setCurrentPage] = useState(1);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [selectedContentType, setSelectedContentType] = useState('pick one...');
 
   // Sample data for content items
   const contentItems = [
@@ -24,6 +25,23 @@ export const WorkspaceLanding = () => {
     { id: 5, title: 'FastAPI', type: 'training', typeCode: 'T', color: 'purple' },
     { id: 6, title: 'Gradle', type: 'article', typeCode: 'A', color: 'darkSlateGrey' },
   ];
+
+  const contentTypes = [
+    { label: 'Slide', value: 'slide' },
+    { label: 'Site', value: 'site' },
+    { label: 'Article', value: 'article' },
+    { label: 'School', value: 'school' },
+    { label: 'Training', value: 'training' },
+  ];
+
+  const toggle = () => setDropdownOpen(prevState => !prevState);
+
+  const handleCreateNew = type => {
+    setSelectedContentType(type);
+    setDropdownOpen(false);
+    // Ici, vous pouvez ajouter la logique pour créer un nouveau contenu en fonction du type sélectionné
+    // console.log(`Creating new ${type}`);
+  };
 
   const handleTypeChange = type => {
     if (type === 'all') {
@@ -66,23 +84,25 @@ export const WorkspaceLanding = () => {
 
   return (
     <div className="workspace-landing">
-      {/* Top controls row with selector and new button */}
+      {/* Top controls row with dropdown button positioned left */}
       <Row className="controls-bar">
         <Col xs={12}>
-          <div className="d-flex justify-content-between align-items-center">
-            <FormGroup className="content-type-select mb-0 d-flex align-items-center">
-              <Input type="select" name="contentType" id="contentType" className="h-100 d-flex align-items-center">
-                <option>pick one...</option>
-                <option>Slide</option>
-                <option>Site</option>
-                <option>Article</option>
-                <option>School</option>
-                <option>Training</option>
-              </Input>
-            </FormGroup>
-            <Button color="primary" className="new-button">
-              New
-            </Button>
+          <div className="d-flex justify-content-start align-items-center">
+            <Dropdown isOpen={dropdownOpen} toggle={toggle} className="content-type-dropdown">
+              <DropdownToggle caret color="primary" className="d-flex align-items-center">
+                <i className="bi bi-plus-lg me-2"></i>
+                New
+              </DropdownToggle>
+              <DropdownMenu>
+                {contentTypes.map(type => (
+                  <DropdownItem key={type.value} onClick={() => handleCreateNew(type.value)}>
+                    <span style={{ color: typeColors[type.value], fontWeight: 'bold' }}>
+                      ({typeCodes[type.value]}) {type.label}
+                    </span>
+                  </DropdownItem>
+                ))}
+              </DropdownMenu>
+            </Dropdown>
           </div>
         </Col>
       </Row>
@@ -140,7 +160,7 @@ export const WorkspaceLanding = () => {
       <Row className="pagination-bar mt-3">
         {/* Texte aligné à gauche */}
         <Col xs={12} md={6} className="pagination-info">
-          <span>1 - 10 of 10 presentations</span>
+          <span>1 - 10 of 10 items</span>
         </Col>
 
         {/* Pagination centrée */}
