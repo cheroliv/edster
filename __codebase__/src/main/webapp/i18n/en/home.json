@@ -1,17 +1,17 @@
 {
   "home": {
-    "title": "Welcome to cccp.education",
+    "title": "Welcome to Edster",
     "subtitle": "The communication tools platform.",
     "logged": {
       "message": "You are logged in as user \"{{username}}\"."
     },
-    "question": "If you have any question on cccp.education:",
+    "question": "If you have any question on Edster:",
     "link": {
-      "homepage": "cccp.education homepage",
+      "homepage": "Edster homepage",
       "cccp": "Common Content Creators Professionalizing",
       "bugtracker": "Edster bug tracker",
       "chat": "Edster public chat room",
-      "follow": "follow @cccp.education on YouTube"
+      "follow": "follow @talaria.school on YouTube"
     },
     "like": "If you like Edster, don't forget to give us a star on",
     "github": "GitHub"

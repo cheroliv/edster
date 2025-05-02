@@ -25,6 +25,7 @@ jhipster jdl edster.jdl --force;
 
 #jhipster ci-cd;
 
+# shellcheck disable=SC2129
 echo ".goose" >> .gitignore;
 echo "README.pdf" >> .gitignore;
 echo "README.html" >> .gitignore;
