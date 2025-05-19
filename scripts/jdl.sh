@@ -25,6 +25,16 @@ jhipster jdl edster.jdl --force;
 
 #jhipster ci-cd;
 
+#error_exit() {
+#  echo "Error: $1" >&2  # Print the error message to stderr
+#  exit 1                # Exit the script with an error code
+#}
+#FILE=".gitignore"
+#if [ ! -f "$FILE" ]; then
+#  error_exit "File '$FILE' does not exist or is not a regular file."
+#fi
+#TEXT_TO_FIND=".gradle;\n.goose;\nbuild;"
+
 # shellcheck disable=SC2129
 echo ".goose" >> .gitignore;
 echo "README.pdf" >> .gitignore;
